@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joy Shaju | Software Engineer</title>
+    
+    <!-- Tailwind CSS for styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Fira Code', 'monospace'],
+                    },
+                    colors: {
+                        cyan: {
+                            400: '#22d3ee',
+                            500: '#06b6d4',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0f172a; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #334155; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569; 
+        }
+        
+        .nav-link.active {
+            color: #22d3ee;
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-200 font-sans selection:bg-cyan-500/30 antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#home" class="flex-shrink-0 font-bold text-xl tracking-tighter text-white hover:text-cyan-400 transition-colors">
+                    J.S<span class="text-cyan-400">.</span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8 nav-menu">
+                        <a href="#about" class="nav-link text-sm font-medium text-slate-400 hover:text-cyan-400 transition-colors">About</a>
+                        <a href="#experience" class="nav-link text-sm font-medium text-slate-400 hover:text-cyan-400 transition-colors">Experience</a>
+                        <a href="#projects" class="nav-link text-sm font-medium text-slate-400 hover:text-cyan-400 transition-colors">Projects</a>
+                        <a href="#education" class="nav-link text-sm font-medium text-slate-400 hover:text-cyan-400 transition-colors">Education</a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-400 hover:text-white focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-800 border-b border-slate-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#about" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700">About</a>
+                <a href="#experience" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700">Experience</a>
+                <a href="#projects" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700">Projects</a>
+                <a href="#education" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-700">Education</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pt-16">
+        
+        <!-- Hero Section -->
+        <section id="home" class="min-h-[90vh] flex flex-col justify-center py-20 section-spy">
+            <div class="space-y-6">
+                <p class="text-cyan-400 font-mono tracking-wide">Hi, my name is</p>
+                <h1 class="text-5xl md:text-7xl font-bold text-slate-100 tracking-tight">
+                    Joy Shaju.
+                </h1>
+                <h2 class="text-4xl md:text-6xl font-bold text-slate-400 tracking-tight">
+                    I build scalable software solutions.
+                </h2>
+                <p class="max-w-2xl text-lg text-slate-400 leading-relaxed pt-4">
+                    I'm a B.Tech Information Technology student and aspiring Software Development Engineer. 
+                    I specialize in full-stack development, NLP-based systems, and writing clean, maintainable code.
+                </p>
+                
+                <div class="flex flex-wrap gap-4 pt-6">
+                    <a href="mailto:joyshaju12345@gmail.com" class="flex items-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-slate-900 px-6 py-3 rounded-md font-medium transition-all duration-300 transform hover:-translate-y-1">
+                        <i class="fa-solid fa-paper-plane"></i> Get In Touch
+                    </a>
+                    <!-- DOWNLOAD RESUME BUTTON -->
+                    <a href="Joy Shaju Resume.pdf" download="Joy Shaju Resume.pdf" class="flex items-center gap-2 bg-slate-800 hover:bg-slate-700 text-slate-200 border border-slate-700 px-6 py-3 rounded-md font-medium transition-all duration-300 transform hover:-translate-y-1">
+                        <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+                    </a>
+                </div>
+
+                <div class="flex items-center gap-6 pt-8 text-slate-400">
+                    <a href="tel:7539925499" class="flex items-center gap-2 hover:text-cyan-400 transition-colors">
+                        <i class="fa-solid fa-phone"></i>
+                        <span class="text-sm font-mono">+91 75399 25499</span>
+                    </a>
+                    <a href="https://linkedin.com/in/joy-shaju" target="_blank" class="flex items-center gap-2 hover:text-cyan-400 transition-colors">
+                        <i class="fa-brands fa-linkedin text-xl"></i>
+                        <span class="text-sm font-mono">LinkedIn</span>
+                    </a>
+                    <a href="https://github.com/Joyshaju" target="_blank" class="flex items-center gap-2 hover:text-cyan-400 transition-colors">
+                        <i class="fa-brands fa-github text-xl"></i>
+                        <span class="text-sm font-mono">GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Skills Section -->
+        <section id="about" class="py-24 border-t border-slate-800 section-spy">
+            <div class="flex items-center gap-4 mb-12">
+                <i class="fa-solid fa-user text-cyan-400 text-2xl"></i>
+                <h2 class="text-3xl font-bold text-slate-100">About Me</h2>
+                <div class="h-[1px] bg-slate-700 flex-grow ml-4"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-4 text-slate-400 leading-relaxed text-lg">
+                    <p>
+                        I am a dedicated Information Technology undergraduate with strong foundations in data structures, algorithms, and full-stack development. My passion lies in designing and building scalable applications that solve real-world problems.
+                    </p>
+                    <p>
+                        Through my academic journey and internships, I've gained hands-on exposure to working with modern frameworks, RESTful APIs, and robust databases. I am particularly interested in NLP-based systems and crafting intelligent backend logic.
+                    </p>
+                    <p>
+                        I thrive in collaborative environments and am constantly learning new technologies to write cleaner, more efficient, and maintainable code.
+                    </p>
+                </div>
+
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-slate-200 mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-code text-cyan-400"></i> Languages & Core
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-800 text-cyan-400 px-3 py-1 rounded-full text-sm font-mono border border-cyan-900/50">JavaScript</span>
+                            <span class="bg-slate-800 text-cyan-400 px-3 py-1 rounded-full text-sm font-mono border border-cyan-900/50">Python</span>
+                            <span class="bg-slate-800 text-cyan-400 px-3 py-1 rounded-full text-sm font-mono border border-cyan-900/50">Java</span>
+                            <span class="bg-slate-800 text-cyan-400 px-3 py-1 rounded-full text-sm font-mono border border-cyan-900/50">Data Structures</span>
+                            <span class="bg-slate-800 text-cyan-400 px-3 py-1 rounded-full text-sm font-mono border border-cyan-900/50">Algorithms</span>
+                            <span class="bg-slate-800 text-cyan-400 px-3 py-1 rounded-full text-sm font-mono border border-cyan-900/50">NLP</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-xl font-semibold text-slate-200 mb-4 flex items-center gap-2">
+                            <i class="fa-solid fa-layer-group text-cyan-400"></i> Technologies & Tools
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="bg-slate-800 text-slate-300 px-3 py-1 rounded-full text-sm border border-slate-700">Node.js</span>
+                            <span class="bg-slate-800 text-slate-300 px-3 py-1 rounded-full text-sm border border-slate-700">HTML/CSS</span>
+                            <span class="bg-slate-800 text-slate-300 px-3 py-1 rounded-full text-sm border border-slate-700">Tailwind CSS</span>
+                            <span class="bg-slate-800 text-slate-300 px-3 py-1 rounded-full text-sm border border-slate-700">REST APIs</span>
+                            <span class="bg-slate-800 text-slate-300 px-3 py-1 rounded-full text-sm border border-slate-700">Git/GitHub</span>
+                            <span class="bg-slate-800 text-slate-300 px-3 py-1 rounded-full text-sm border border-slate-700">Full-Stack Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-24 border-t border-slate-800 section-spy">
+            <div class="flex items-center gap-4 mb-12">
+                <i class="fa-solid fa-briefcase text-cyan-400 text-2xl"></i>
+                <h2 class="text-3xl font-bold text-slate-100">Experience</h2>
+                <div class="h-[1px] bg-slate-700 flex-grow ml-4"></div>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Experience 1 -->
+                <div class="relative pl-8 md:pl-0">
+                    <div class="hidden md:block absolute left-[8.5px] top-0 bottom-0 w-[1px] bg-slate-700"></div>
+                    <div class="md:ml-12 group">
+                        <div class="absolute left-0 md:left-[4px] top-1.5 h-2.5 w-2.5 rounded-full bg-cyan-400 ring-4 ring-slate-900 group-hover:bg-cyan-300 transition-colors"></div>
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                            <h3 class="text-2xl font-semibold text-slate-200">Full Stack Developer Intern</h3>
+                            <span class="text-cyan-400 font-mono text-sm mt-1 md:mt-0">June 2025 — July 2025</span>
+                        </div>
+                        <h4 class="text-lg text-slate-400 mb-4 font-medium flex items-center gap-2">
+                            <i class="fa-solid fa-building text-sm"></i> AK Info Park
+                        </h4>
+                        <ul class="space-y-3 text-slate-400 list-none">
+                            <li class="flex items-start">
+                                <span class="text-cyan-400 mr-2 mt-1.5 text-xs"><i class="fa-solid fa-caret-right"></i></span>
+                                Developed and maintained responsive web applications utilizing HTML, Tailwind CSS, and JavaScript, ensuring cross-platform compatibility.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-cyan-400 mr-2 mt-1.5 text-xs"><i class="fa-solid fa-caret-right"></i></span>
+                                Built and integrated robust backend APIs and services using Node.js to support frontend functionalities and optimize data flow.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-cyan-400 mr-2 mt-1.5 text-xs"><i class="fa-solid fa-caret-right"></i></span>
+                                Collaborated with cross-functional teams to write clean code, debug issues, and deploy scalable full-stack solutions.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience 2 -->
+                <div class="relative pl-8 md:pl-0">
+                    <div class="hidden md:block absolute left-[8.5px] top-0 bottom-0 w-[1px] bg-slate-700"></div>
+                    <div class="md:ml-12 group">
+                        <div class="absolute left-0 md:left-[4px] top-1.5 h-2.5 w-2.5 rounded-full bg-slate-600 ring-4 ring-slate-900 group-hover:bg-cyan-400 transition-colors"></div>
+                        <div class="flex flex-col md:flex-row md:items-center justify-between mb-2">
+                            <h3 class="text-2xl font-semibold text-slate-200">Cybersecurity Intern</h3>
+                            <span class="text-cyan-400 font-mono text-sm mt-1 md:mt-0">August 2024 — September 2024</span>
+                        </div>
+                        <h4 class="text-lg text-slate-400 mb-4 font-medium flex items-center gap-2">
+                            <i class="fa-solid fa-shield-halved text-sm"></i> Corizo
+                        </h4>
+                        <ul class="space-y-3 text-slate-400 list-none">
+                            <li class="flex items-start">
+                                <span class="text-cyan-400 mr-2 mt-1.5 text-xs"><i class="fa-solid fa-caret-right"></i></span>
+                                Conducted comprehensive vulnerability assessments and learned to implement critical network security protocols.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-cyan-400 mr-2 mt-1.5 text-xs"><i class="fa-solid fa-caret-right"></i></span>
+                                Analyzed web application structures to identify, document, and mitigate potential security threats and data breaches.
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-cyan-400 mr-2 mt-1.5 text-xs"><i class="fa-solid fa-caret-right"></i></span>
+                                Drafted detailed security reports and actively participated in building basic security measures for existing systems.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-24 border-t border-slate-800 section-spy">
+            <div class="flex items-center gap-4 mb-12">
+                <i class="fa-solid fa-laptop-code text-cyan-400 text-2xl"></i>
+                <h2 class="text-3xl font-bold text-slate-100">Featured Projects</h2>
+                <div class="h-[1px] bg-slate-700 flex-grow ml-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-8 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-300 group flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="p-3 bg-slate-900 rounded-lg text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                            <i class="fa-solid fa-language text-2xl"></i>
+                        </div>
+                        <a href="https://github.com/Joyshaju/Fraemi-SRT-Translator-App" target="_blank" class="text-slate-400 hover:text-cyan-400 transition-colors">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xl"></i>
+                        </a>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-200 mb-3 group-hover:text-cyan-400 transition-colors">
+                        Fraemi Vision SRT Translator App
+                    </h3>
+                    <p class="text-slate-400 mb-6 flex-grow leading-relaxed">
+                        An NLP-based application engineered to automatically process and translate SubRip Subtitle (SRT) files with high accuracy. Integrates robust backend translation APIs to ensure context-aware multilingual support.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mt-auto pt-6 border-t border-slate-700/50">
+                        <span class="text-xs font-mono text-cyan-400">Python</span>
+                        <span class="text-xs font-mono text-cyan-400">NLP</span>
+                        <span class="text-xs font-mono text-cyan-400">APIs</span>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-slate-800/50 border border-slate-700 rounded-xl p-8 hover:-translate-y-2 hover:shadow-2xl hover:shadow-cyan-500/10 transition-all duration-300 group flex flex-col h-full">
+                    <div class="flex justify-between items-start mb-6">
+                        <div class="p-3 bg-slate-900 rounded-lg text-cyan-400 group-hover:text-cyan-300 transition-colors">
+                            <i class="fa-solid fa-bug-slash text-2xl"></i>
+                        </div>
+                        <a href="https://github.com/Joyshaju/AI-Code-Debugger" target="_blank" class="text-slate-400 hover:text-cyan-400 transition-colors">
+                            <i class="fa-solid fa-arrow-up-right-from-square text-xl"></i>
+                        </a>
+                    </div>
+                    <h3 class="text-2xl font-bold text-slate-200 mb-3 group-hover:text-cyan-400 transition-colors">
+                        AI - Code Debugger
+                    </h3>
+                    <p class="text-slate-400 mb-6 flex-grow leading-relaxed">
+                        An automated code debugging tool utilizing Artificial Intelligence to efficiently detect syntax and logical errors. Features an intuitive UI to display real-time error corrections and code explanations, significantly enhancing developer productivity.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mt-auto pt-6 border-t border-slate-700/50">
+                        <span class="text-xs font-mono text-cyan-400">JavaScript</span>
+                        <span class="text-xs font-mono text-cyan-400">Node.js</span>
+                        <span class="text-xs font-mono text-cyan-400">AI Integration</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="py-24 border-t border-slate-800 section-spy">
+            <div class="flex items-center gap-4 mb-12">
+                <i class="fa-solid fa-graduation-cap text-cyan-400 text-2xl"></i>
+                <h2 class="text-3xl font-bold text-slate-100">Education</h2>
+                <div class="h-[1px] bg-slate-700 flex-grow ml-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-slate-800/30 border border-slate-700/50 rounded-lg p-6 hover:bg-slate-800/50 transition-colors">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-slate-200">Panimalar Engineering College</h3>
+                        <span class="text-cyan-400 font-mono text-sm whitespace-nowrap ml-4">2023 — 2027</span>
+                    </div>
+                    <p class="text-slate-400 font-medium">Bachelor of Technology in Information Technology</p>
+                </div>
+
+                <div class="bg-slate-800/30 border border-slate-700/50 rounded-lg p-6 hover:bg-slate-800/50 transition-colors">
+                    <div class="flex justify-between items-start mb-2">
+                        <h3 class="text-xl font-bold text-slate-200">Carmel Jyothi Matric Hr Sec School</h3>
+                        <span class="text-cyan-400 font-mono text-sm whitespace-nowrap ml-4">2022 — 2023</span>
+                    </div>
+                    <p class="text-slate-400 font-medium">Higher Secondary Education</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 py-8 text-center text-slate-500 font-mono text-sm border-t border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col items-center justify-center space-y-4">
+            <div class="flex space-x-6">
+                <a href="https://github.com/Joyshaju" target="_blank" class="hover:text-cyan-400 transition-colors"><i class="fa-brands fa-github text-xl"></i></a>
+                <a href="https://linkedin.com/in/joy-shaju" target="_blank" class="hover:text-cyan-400 transition-colors"><i class="fa-brands fa-linkedin text-xl"></i></a>
+                <a href="mailto:joyshaju12345@gmail.com" class="hover:text-cyan-400 transition-colors"><i class="fa-solid fa-envelope text-xl"></i></a>
+            </div>
+            <p>
+                Designed & Built by Joy Shaju <br class="md:hidden" />
+                <span class="hidden md:inline"> | </span> 
+                &copy; <span id="year"></span> All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Mobile menu toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const icon = btn.querySelector('i');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        function toggleMenu() {
+            menu.classList.toggle('hidden');
+            if (menu.classList.contains('hidden')) {
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            } else {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+            }
+        }
+
+        btn.addEventListener('click', toggleMenu);
+
+        // Close mobile menu when clicking a link
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!menu.classList.contains('hidden')) {
+                    toggleMenu();
+                }
+            });
+        });
+
+        // Scroll Spy (highlight active nav link)
+        const sections = document.querySelectorAll('.section-spy');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
